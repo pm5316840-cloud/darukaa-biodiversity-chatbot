@@ -35,7 +35,7 @@ import google.generativeai as genai
 KB_DIR = os.path.join(os.path.dirname(__file__), "knowledge_base")
 COLLECTION_NAME = "darukaa_kb"
 REQUIRED_VARS = ["soil_organic_carbon", "rainfall", "land_use", "region"]
-CHAT_MODEL = "gemini-1.5-flash"
+CHAT_MODEL = "gemini-2.5-flash"
 
 SYSTEM_PROMPT = """You are an AI environmental scientist for Darukaa.Earth. You reason
 about biodiversity, soil, climate, and land-use interactions using ONLY the
