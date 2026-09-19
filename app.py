@@ -37,7 +37,7 @@ from google.api_core.exceptions import ResourceExhausted, GoogleAPICallError
 KB_DIR = os.path.join(os.path.dirname(__file__), "knowledge_base")
 COLLECTION_NAME = "darukaa_kb"
 REQUIRED_VARS = ["soil_organic_carbon", "rainfall", "land_use", "region"]
-CHAT_MODEL = "gemini-2.0-flash-lite"
+CHAT_MODEL = "gemini-3.8-flash"
 
 SYSTEM_PROMPT = """You are an AI environmental scientist for Darukaa.Earth. You reason
 about biodiversity, soil, climate, and land-use interactions using ONLY the
