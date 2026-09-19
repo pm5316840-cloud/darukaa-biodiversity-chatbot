@@ -1,0 +1,25 @@
+LAND USE / LAND COVER KNOWLEDGE BASE
+
+[LAND-01] Habitat Fragmentation and Species Richness
+Monoculture cropland systems reduce landscape heterogeneity, fragmenting habitat corridors that many species (especially pollinators and birds) rely on for movement. Studies aggregated by IPBES (Intergovernmental Science-Policy Platform on Biodiversity and Ecosystem Services) show that farms with less than 10% non-crop habitat (hedgerows, field margins, woodlots) have 20-30% lower pollinator species richness than farms maintaining 15-20% non-crop habitat.
+Metric impacted: Species richness, habitat connectivity.
+Time horizon: Short-term for margin establishment; medium-term (2-4 years) for measurable richness gains.
+Source: IPBES Global Assessment on Biodiversity and Ecosystem Services (2019).
+
+[LAND-02] Intercropping and Polyculture Diversity
+Shifting from monoculture to intercropping (2+ crop species grown together, e.g., maize-legume systems) increases structural and functional diversity at the field level, providing varied niches for beneficial insects and reducing pest pressure through natural predator support. Yield stability also improves under climate variability due to differing crop water/nutrient needs.
+Metric impacted: Habitat diversity, species richness, yield resilience.
+Time horizon: Short-term (within 1 growing season for initial effects).
+Source: FAO Mixed Cropping Systems guidance; CGIAR agroecology research syntheses.
+
+[LAND-03] Field Margins and Hedgerows
+Maintaining or restoring hedgerows and uncultivated field margins (even narrow 2-3m strips) provides nesting and overwintering habitat for pollinators and natural pest predators. Research shows margins can increase local pollinator abundance by 30-50% within 2 years of establishment, with downstream benefits to nearby crop pollination rates.
+Metric impacted: Pollinator abundance, natural pest control.
+Time horizon: Short to medium-term (1-2 years).
+Source: FAO Pollinator-friendly farming practices technical notes.
+
+[LAND-04] Land Use Intensity and Soil-Biodiversity Feedback
+High-intensity land use (continuous monocropping, heavy tillage, minimal fallow) creates a compounding feedback loop: soil degradation reduces plant vigor, which reduces herbivore and predator insect populations, which reduces bird and small mammal activity. Breaking this loop requires intervening at the soil level (organic matter, structure) simultaneously with the land-cover level (diversification).
+Metric impacted: Multi-trophic biodiversity (soil to birds).
+Time horizon: Long-term (5+ years for full trophic cascade recovery).
+Source: FAO State of the World's Biodiversity for Food and Agriculture report.
