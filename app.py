@@ -21,10 +21,12 @@ Architecture:
 import os
 import re
 import json
+import time
 import streamlit as st
 import chromadb
 from chromadb.utils import embedding_functions
 import google.generativeai as genai
+from google.api_core.exceptions import ResourceExhausted, GoogleAPICallError
 
 # --------------------------------------------------------------------------
 # Config
@@ -35,7 +37,7 @@ import google.generativeai as genai
 KB_DIR = os.path.join(os.path.dirname(__file__), "knowledge_base")
 COLLECTION_NAME = "darukaa_kb"
 REQUIRED_VARS = ["soil_organic_carbon", "rainfall", "land_use", "region"]
-CHAT_MODEL = "gemini-3.8-flash"
+CHAT_MODEL = "gemini-2.0-flash-lite"
 
 SYSTEM_PROMPT = """You are an AI environmental scientist for Darukaa.Earth. You reason
 about biodiversity, soil, climate, and land-use interactions using ONLY the
@@ -115,6 +117,23 @@ def retrieve_context(collection, query: str, n_results: int = 5):
     results = collection.query(query_texts=[query], n_results=n_results)
     docs = results["documents"][0] if results["documents"] else []
     return "\n\n---\n\n".join(docs)
+
+
+def safe_generate(model, content, temperature):
+    """Calls Gemini and returns friendly text instead of crashing on rate limits."""
+    try:
+        response = model.generate_content(
+            content, generation_config={"temperature": temperature}
+        )
+        return response.text
+    except ResourceExhausted:
+        return (
+            "⏳ **Free tier rate limit reached.** This demo uses Google Gemini's "
+            "free API tier, which allows a limited number of requests per minute. "
+            "Please wait about 60 seconds and send your message again."
+        )
+    except GoogleAPICallError as e:
+        return f"⚠️ The AI service returned an error: {e}. Please try again in a moment."
 
 
 # --------------------------------------------------------------------------
@@ -227,10 +246,7 @@ if user_input:
                 known=json.dumps(st.session_state.known_vars, indent=2) or "Nothing yet",
                 missing=", ".join(missing),
             )
-            response = model.generate_content(
-                prompt, generation_config={"temperature": 0.3}
-            )
-            reply = response.text
+            reply = safe_generate(model, prompt, 0.3)
         else:
             # Enough context — retrieve and reason
             context = retrieve_context(collection, all_text)
@@ -243,10 +259,7 @@ Retrieved knowledge context:
 User's latest message: {user_input}
 
 Provide your recommendation(s) following the required output structure."""
-            response = model.generate_content(
-                [SYSTEM_PROMPT, full_prompt], generation_config={"temperature": 0.4}
-            )
-            reply = response.text
+            reply = safe_generate(model, [SYSTEM_PROMPT, full_prompt], 0.4)
 
         st.markdown(reply)
         st.session_state.messages.append({"role": "assistant", "content": reply})
