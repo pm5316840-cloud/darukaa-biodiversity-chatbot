@@ -1,0 +1,25 @@
+HUMAN IMPACT KNOWLEDGE BASE
+
+[HUM-01] Synthetic Pesticide Impact on Pollinators
+Broad-spectrum synthetic pesticides, particularly neonicotinoids, are associated with 30-50% reductions in wild pollinator visitation rates in treated fields versus untreated or integrated-pest-management (IPM) fields. Transitioning to IPM (biological controls, targeted application, beneficial insect habitat) can restore pollinator visitation within 1-2 growing seasons.
+Metric impacted: Pollinator abundance, species richness.
+Time horizon: Short to medium-term (1-2 seasons).
+Source: FAO International Code of Conduct on Pesticide Management; IPBES pollinator assessment.
+
+[HUM-02] Deforestation and Fragmentation Effects
+Clearing forest or woodland adjacent to farmland removes seed sources, pollinator refuges, and predator habitat that suppress crop pests naturally. Studies show farms within 1km of intact forest fragments have measurably higher natural pest control services than farms in fully cleared landscapes. Retaining even small woodlots (0.5-1 hectare) can preserve a meaningful fraction of these services.
+Metric impacted: Natural pest control, species richness.
+Time horizon: Immediate loss upon clearing; multi-decade recovery if replanted.
+Source: FAO Forest and Landscape Restoration guidance; IPBES Global Assessment.
+
+[HUM-03] Chemical Fertilizer Overuse and Soil Microbiome
+Excessive synthetic nitrogen fertilizer application suppresses beneficial soil microbial communities (particularly mycorrhizal fungi) by reducing the plant's need to form symbiotic nutrient-exchange relationships. Balanced fertilization combined with organic matter inputs maintains both yield and microbial diversity.
+Metric impacted: Soil microbial diversity.
+Time horizon: Medium-term (2-3 years to rebuild suppressed microbial populations).
+Source: FAO Sustainable fertilizer management guidelines.
+
+[HUM-04] Water Pollution and Downstream Biodiversity
+Agricultural runoff carrying excess nutrients or pesticides into waterways causes eutrophication and aquatic biodiversity loss downstream. Buffer strips of vegetation along waterways (minimum 5-10m) can filter 40-60% of runoff nutrients before they reach water bodies.
+Metric impacted: Water quality, aquatic species diversity.
+Time horizon: Short-term (filtration effect immediate once buffer established).
+Source: FAO Water quality and agriculture guidance.
